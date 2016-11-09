@@ -18,11 +18,16 @@ system you're salting.
 
 ```yaml
 ndenv:
+  # The version of node to be installed for all users. N.B., this can be
+  # overridden per user.
   node:
-    version: 6.9.0
+    version: 6.7.0
 
   users:
     vagrant:
       user: vagrant
       group: vagrant
+      node:
+        version: 6.9.0
+
 ```
