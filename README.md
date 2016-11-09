@@ -11,3 +11,18 @@ http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html
   - [ndenv.install](#ndenv.install)
   - [ndenv.plugins](#ndenv.plugins)
   - [ndenv.profile](#ndenv.profile)
+
+## Basic pillar
+Below is a basic pillar for the user `vagrant`. N.B., the user must exist on the
+system you're salting.
+
+```yaml
+ndenv:
+  node:
+    version: 6.9.0
+
+  users:
+    vagrant:
+      user: vagrant
+      group: vagrant
+```
