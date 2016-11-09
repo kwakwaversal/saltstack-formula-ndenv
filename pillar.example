@@ -1,0 +1,34 @@
+ndenv:
+  # Full path to the ndenv executable. This should be relative to the user that
+  # ndenv is being installed to. The default should be fine.
+  #
+  # bin: ~/.ndenv/bin/ndenv
+
+  node:
+    version: 6.9.0
+
+  # Name of the file to append the PATH information for ndenv. Defaults to
+  # .bash_profile for Debian and .profile for Ubuntu
+  #
+  # profile: .bash_profile
+
+  # A list of plugins to install.
+  #
+  # In the example below, 'install' refers to one of the commands that will be
+  # available once this plugin has been added. This becomes a conditional check
+  # to see if a plugin has already been installed or not - so name it correctly!
+  #
+  # N.B., you need to include the node-build plugin else you won't be able to
+  # install node.
+  #
+  # plugins:
+  #   install: git://github.com/riywo/node-build.git
+
+  # Location of the ndenv repository (you can overwrite it with a local clone)
+  #
+  # repository: git://github.com/riywo/ndenv.git
+
+  users:
+    vagrant:
+      user: vagrant
+      group: vagrant
