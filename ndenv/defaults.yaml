@@ -1,6 +1,7 @@
 ndenv:
   bin: ~/.ndenv/bin/ndenv
   node:
+    packages: []
     version: 6.9.0
 
   # Full path of the file to append the PATH information for ndenv. This should

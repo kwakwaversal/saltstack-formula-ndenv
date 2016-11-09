@@ -21,6 +21,7 @@ ndenv:
   # The version of node to be installed for all users. N.B., this can be
   # overridden per user.
   node:
+    packages: []
     version: 6.7.0
 
   users:
@@ -28,6 +29,8 @@ ndenv:
       user: vagrant
       group: vagrant
       node:
+        packages:
+          - gulp
         version: 6.9.0
 
 ```
