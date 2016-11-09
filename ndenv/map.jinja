@@ -1,0 +1,24 @@
+{% import_yaml "ndenv/defaults.yaml" as defaults %}
+{% import_yaml "ndenv/osmap.yaml" as osmap %}
+
+{% set ndenv = salt['grains.filter_by'](
+    defaults,
+    merge=salt['grains.filter_by'](
+        osmap,
+        grain='os_family',
+        merge=salt['pillar.get']('ndenv', {}),
+    ),
+    base='ndenv',
+) %}
+
+{% set map = salt['grains.filter_by']({
+    'default': {
+        'user': 'root',
+        'group': 'root',
+        'ndenv':  '~/.ndenv/bin/ndenv',
+        'node': {
+          'version': '6.9.0',
+        },
+        'repository': 'git://github.com/riywo/ndenv.git',
+    },
+}, merge=salt['pillar.get']('ndenv:lookup')) %}

@@ -1,0 +1,23 @@
+ndenv:
+  bin: ~/.ndenv/bin/ndenv
+  node:
+    version: 6.9.0
+
+  # Full path of the file to append the PATH information for ndenv. This should
+  # will be prepended
+  profile: .profile
+
+  # Plugins to install
+  plugins:
+    install: git://github.com/riywo/node-build.git
+
+  # Location of the ndenv repository (you can overwrite it to a local repo)
+  repository: git://github.com/riywo/ndenv.git
+
+  # A dictionary of users that ndenv should be installed for
+  #
+  # users:
+  #   vagrant:
+  #     user: vagrant
+  #     group: vagrant
+  users: {}
