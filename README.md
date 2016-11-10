@@ -2,12 +2,18 @@
 Install [ndenv](https://github.com/riywo/ndenv) and [Node](https://nodejs.org/en/)
 http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html
 
+## Description
+ndenv will be installed in ~/.ndenv. This is assumed when checking out the main
+repository, when checking out ndenv-related plugins, and conditional checks for
+certain states. It's not currently possible to change the default installation
+folder without updating the whole formula.
+
 ## Available states
 
   - [ndenv](#ndenv)
   - [ndenv.clone](#ndenv.clone)
   - [ndenv.global](#ndenv.global)
-  - [ndenv.gulp](#ndenv.gulp)
+  - [ndenv.global-packages](#ndenv.global-packages)
   - [ndenv.install](#ndenv.install)
   - [ndenv.plugins](#ndenv.plugins)
   - [ndenv.profile](#ndenv.profile)
