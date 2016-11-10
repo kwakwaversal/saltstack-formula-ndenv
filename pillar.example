@@ -1,18 +1,9 @@
 ndenv:
-  # ndenv will be installed in ~/.ndenv. This is assumed when checking out the
-  # main repository, when checking out ndenv-related plugins, and conditional
-  # checks for certain states. It's not currently possible to change the default
-  # installation folder without updating the whole formula.
-
-  # Full path to the ndenv executable. This should be relative to the user that
-  # ndenv is being installed to. The default should be fine.
-  #
-  # bin: ~/.ndenv/bin/ndenv
-
   # These node options will be used unless an option has been overridden in
   # the users dictionary below.
   #
   node:
+    global: ''
     packages_install_options: ''
     packages: []
     versions:
@@ -39,11 +30,32 @@ ndenv:
   #
   # repository: git://github.com/riywo/ndenv.git
 
+  # A dictionary of users that ndenv should be installed for.
+  #
+  # # Users will install with the default node: options
+  # users:
+  #   vagrant:
+  #     user: vagrant
+  #     group: vagrant
+  #
+  # # Override default :node options
+  # users:
+  #   vagrant:
+  #     user: vagrant
+  #     group: vagrant
+  #     node:
+  #       global: 6.9.0
+  #       packages_install_options: --registry http://registry.npmjs.eu
+  #       packages:
+  #         - gulp
+  #       versions:
+  #         - 6.9.0
   users:
     vagrant:
       user: vagrant
       group: vagrant
       node:
+        global: 6.7.0
         packages_install_options: --registry http://registry.npmjs.org
         packages:
           - gulp

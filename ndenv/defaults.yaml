@@ -1,5 +1,6 @@
 ndenv:
   bin: ~/.ndenv/bin/ndenv
+
   node:
     global: ''
     packages_install_options: ''
@@ -14,7 +15,7 @@ ndenv:
   plugins:
     install: git://github.com/riywo/node-build.git
 
-  # Location of the ndenv repository (you can overwrite it to a local repo)
+  # Location of the ndenv repository (you can overwrite it with a local clone)
   repository: git://github.com/riywo/ndenv.git
 
   # A dictionary of users that ndenv should be installed for
