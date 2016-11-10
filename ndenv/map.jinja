@@ -10,15 +10,3 @@
     ),
     base='ndenv',
 ) %}
-
-{% set map = salt['grains.filter_by']({
-    'default': {
-        'user': 'root',
-        'group': 'root',
-        'ndenv':  '~/.ndenv/bin/ndenv',
-        'node': {
-          'version': '6.9.0',
-        },
-        'repository': 'git://github.com/riywo/ndenv.git',
-    },
-}, merge=salt['pillar.get']('ndenv:lookup')) %}

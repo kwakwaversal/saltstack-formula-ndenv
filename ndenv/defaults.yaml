@@ -1,14 +1,16 @@
 ndenv:
   bin: ~/.ndenv/bin/ndenv
   node:
+    global: ''
+    packages_install_options: ''
     packages: []
-    version: 6.9.0
+    versions: 6.9.0
 
-  # Full path of the file to append the PATH information for ndenv. This should
-  # will be prepended
+  # Name of the file to append the PATH information for ndenv. Defaults to
+  # .bash_profile for Debian and .profile for Ubuntu
   profile: .profile
 
-  # Plugins to install
+  # Plugins to install (node-build is required to install anything)
   plugins:
     install: git://github.com/riywo/node-build.git
 
@@ -21,4 +23,11 @@ ndenv:
   #   vagrant:
   #     user: vagrant
   #     group: vagrant
+  #     node:
+  #       global: 6.9.0
+  #       packages_install_options: --registry http://registry.npmjs.eu
+  #       packages:
+  #         - gulp
+  #       versions:
+  #         - 6.9.0
   users: {}

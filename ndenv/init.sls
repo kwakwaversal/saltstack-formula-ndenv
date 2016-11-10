@@ -4,4 +4,4 @@ include:
   - ndenv.plugins
   - ndenv.install
   - ndenv.global
-  - ndenv.global-pkgs
+  - ndenv.global-packages

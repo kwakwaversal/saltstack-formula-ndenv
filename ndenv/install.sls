@@ -11,10 +11,12 @@ ndenv-install:
       - curl
 
 {%- for name, args in ndenv.users.items() %}
-{%- set version = salt["pillar.get"]("ndenv:users:" + name + ":node:version", ndenv.node.version) %}
-ndenv-install-{{ name }}:
+  {%- set versions = salt["pillar.get"]("ndenv:users:" + name + ":node:versions", ndenv.node.versions) %}
+  {%- for version in versions %}
+ndenv-install-{{ version }}-{{ name }}:
   cmd.run:
     - unless: {{ ndenv.bin }} versions | grep {{ version }}
     - name: {{ ndenv.bin }} install {{ version }}
     - runas: {{ args.user }}
+  {%- endfor %}
 {%- endfor %}

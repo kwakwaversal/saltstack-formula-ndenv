@@ -1,14 +1,22 @@
 ndenv:
+  # ndenv will be installed in ~/.ndenv. This is assumed when checking out the
+  # main repository, when checking out ndenv-related plugins, and conditional
+  # checks for certain states. It's not currently possible to change the default
+  # installation folder without updating the whole formula.
+
   # Full path to the ndenv executable. This should be relative to the user that
   # ndenv is being installed to. The default should be fine.
   #
   # bin: ~/.ndenv/bin/ndenv
 
-  # The version of node to be installed for all users. N.B., this can be
-  # overridden per user.
+  # These node options will be used unless an option has been overridden in
+  # the users dictionary below.
+  #
   node:
+    packages_install_options: ''
     packages: []
-    version: 6.7.0
+    versions:
+      - 6.9.0
 
   # Name of the file to append the PATH information for ndenv. Defaults to
   # .bash_profile for Debian and .profile for Ubuntu
@@ -36,6 +44,8 @@ ndenv:
       user: vagrant
       group: vagrant
       node:
+        packages_install_options: --registry http://registry.npmjs.org
         packages:
           - gulp
-        version: 6.9.0
+        versions:
+          - 6.7.0
