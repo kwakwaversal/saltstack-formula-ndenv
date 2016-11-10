@@ -35,8 +35,8 @@ ndenv:
       user: vagrant
       group: vagrant
       node:
+        packages_install_options: --registry http://registry.npmjs.eu
         packages:
           - gulp
         version: 6.9.0
-
 ```
