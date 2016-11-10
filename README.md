@@ -28,7 +28,8 @@ ndenv:
   # overridden per user.
   node:
     packages: []
-    version: 6.7.0
+    versions:
+      - 6.7.0
 
   users:
     vagrant:
@@ -38,5 +39,6 @@ ndenv:
         packages_install_options: --registry http://registry.npmjs.eu
         packages:
           - gulp
-        version: 6.9.0
+        versions:
+          - 6.9.0
 ```
