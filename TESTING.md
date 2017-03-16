@@ -23,7 +23,7 @@ $ kitchen destroy
 ```
 
 Once you have run `kitchen converge` you will find you will only want to run the
-`kitchen verify` command while you work on your `testinfra` tests. `verify` will
+`kitchen verify` command while you develop your `testinfra` tests. `verify` will
 run the tests against a running `docker` container, so make sure your tests are
 nullipotent.
 
@@ -51,6 +51,6 @@ is also written in `Python`.
 
 # References
 * [Kitchen](https://docs.chef.io/kitchen.html)
-* [Kitchen and testinfra](https://medium.com/@syndicut/testing-salt-formulas-with-test-kitchen-and-testinfra-d2b8642e6a39
+* [Kitchen and testinfra](https://medium.com/@syndicut/testing-salt-formulas-with-test-kitchen-and-testinfra-d2b8642e6a39)
 * [Saltstack, Docker and Testinfra](http://blog.xebia.com/testing-infrastructure-with-saltstack-docker-and-testinfra/)
 * [Testinfra](https://testinfra.readthedocs.io)
