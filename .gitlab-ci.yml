@@ -12,7 +12,6 @@ stages:
 
 test:
   stage: test
-  # image: docker-reg.inview.local:5000/inview/kitchen:latest
   ## Make the coverage reports and log files downloadable via the gitlab UI
   artifacts:
     expire_in: 3 months
