@@ -1,4 +1,4 @@
-# saltstack-formula-ndenv
+# saltstack-formula-ndenv [![Build Status](https://travis-ci.org/kwakwaversal/saltstack-formula-ndenv.svg?branch=master)](https://travis-ci.org/kwakwaversal/saltstack-formula-ndenv)
 Install [ndenv](https://github.com/riywo/ndenv) and [Node](https://nodejs.org/en/)
 http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html
 
