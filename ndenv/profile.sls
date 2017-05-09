@@ -9,7 +9,7 @@ ndenv-profile-exists-{{ name }}:
     - name: /home/{{ args.user }}/{{ salt["pillar.get"]("ndenv:users:" + name + ":profile", ndenv.profile) }}
     {%- endif %}
     - user: {{ args.user }}
-    - group: {{ args.user }}
+    - group: {{ args.group }}
     - mode: 644
 
 ndenv-profile-append-{{ name }}:
